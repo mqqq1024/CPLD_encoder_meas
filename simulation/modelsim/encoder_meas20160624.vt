@@ -1,0 +1,200 @@
+// Copyright (C) 1991-2011 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "05/17/2016 09:13:46"
+                                                                                
+// Verilog Test Bench template for design : encoder_meas
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module encoder_meas_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [12:0] ch_sgn_in;
+reg ch_sync;
+reg clk;
+reg mcu_n_rst;
+reg mcu_rd_clk;
+reg mcu_start;
+// wires                                               
+wire [7:0]  mcu_data;
+wire mcu_end;
+wire mcu_sync;
+wire [19:0]  ram_addr;
+wire [7:0]  ram_data;
+wire ram_ncs;
+wire ram_nrd;
+wire ram_nwr;
+
+// assign statements (if any)                          
+encoder_meas i1 (
+// port map - connection between master ports and signals/registers   
+	.ch_sgn_in(ch_sgn_in),
+	.ch_sync(ch_sync),
+	.clk(clk),
+	.mcu_data(mcu_data),
+	.mcu_end(mcu_end),
+	.mcu_n_rst(mcu_n_rst),
+	.mcu_rd_clk(mcu_rd_clk),
+	.mcu_start(mcu_start),
+	.mcu_sync(mcu_sync),
+	.ram_addr(ram_addr),
+	.ram_data(ram_data),
+	.ram_ncs(ram_ncs),
+	.ram_nrd(ram_nrd),
+	.ram_nwr(ram_nwr)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+initial
+begin
+	clk = 0;
+	forever #0.5 clk = ~clk;
+end
+
+initial
+begin
+	ch_sgn_in[0]=0;	
+	forever #9  ch_sgn_in[0]=~ch_sgn_in[0];
+end
+
+initial
+begin
+	ch_sgn_in[1]=0;	
+	forever #19  ch_sgn_in[1]=~ch_sgn_in[1];
+end
+
+initial
+begin
+	ch_sgn_in[2]=0;	
+	forever #28  ch_sgn_in[2]=~ch_sgn_in[2];
+end
+
+initial
+begin
+	ch_sgn_in[3]=0;	
+	forever #34  ch_sgn_in[3]=~ch_sgn_in[3];
+end
+
+initial
+begin
+	ch_sgn_in[4]=0;	
+	forever #43  ch_sgn_in[4]=~ch_sgn_in[4];
+end
+
+initial
+begin
+	ch_sgn_in[5]=0;	
+	forever #51  ch_sgn_in[5]=~ch_sgn_in[5];
+end
+
+initial
+begin
+	ch_sgn_in[6]=0;	
+	forever #59  ch_sgn_in[6]=~ch_sgn_in[6];
+end
+
+initial
+begin
+	ch_sgn_in[7]=0;	
+	forever #67  ch_sgn_in[7]=~ch_sgn_in[7];
+end
+
+initial
+begin
+	ch_sgn_in[8]=0;	
+	forever #72  ch_sgn_in[8]=~ch_sgn_in[8];
+end
+
+initial
+begin
+	ch_sgn_in[9]=0;	
+	forever #78  ch_sgn_in[9]=~ch_sgn_in[9];
+end
+
+initial
+begin
+	ch_sgn_in[10]=0;	
+	forever #86  ch_sgn_in[10]=~ch_sgn_in[10];
+end
+
+initial
+begin
+	ch_sgn_in[11]=0;	
+	forever #89  ch_sgn_in[11]=~ch_sgn_in[11];
+end
+
+initial
+begin
+	ch_sgn_in[12]=0;	
+	forever #92  ch_sgn_in[12]=~ch_sgn_in[12];
+end
+
+initial
+begin
+	ch_sync=0;
+	forever #400  ch_sync=~ch_sync;
+
+end
+
+initial
+begin
+	mcu_n_rst=0;
+	#30  mcu_n_rst=1;
+end
+
+initial
+begin
+	mcu_start=0;
+	#55  mcu_start=1;
+
+end
+
+initial
+begin
+	
+	mcu_rd_clk=0;
+	#19000 mcu_rd_clk=0;
+	forever #7  mcu_rd_clk=~mcu_rd_clk;
+
+end   
+                                                
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+ 
+#2000000 $stop;
+                                                      
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule

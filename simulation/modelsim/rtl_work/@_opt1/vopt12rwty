@@ -1,0 +1,111 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\encoder_measurement\simulation\modelsim
+T_opt
+Z1 V[X8OFM]g3Q3`5C`0M2L:j1
+Z2 04 20 4 work encoder_meas_vlg_tst fast 0
+Z3 =1-408d5c90cf0e-57359f98-5c-2340
+Z4 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work +acc
+Z5 n@_opt
+Z6 OL;O;10.0c;49
+Z7 dF:\encoder_measurement\simulation\modelsim
+T_opt1
+Z8 V>7KfK:>iaXWUfz7VN4g9J2
+R2
+Z9 =1-408d5c90cf0e-57e24997-24b-1830
+R4
+Z10 n@_opt1
+R6
+R7
+vchannel_sel
+Z11 ISoGS8PWFPQ:9VS7o@VD8Y1
+Z12 Vz?b0je?>PbSYk6M`^`_VR1
+Z13 dC:\Users\Administrator\Desktop\encoder_meas_20160707\simulation\modelsim
+Z14 w1468061465
+Z15 8C:/Users/Administrator/Desktop/encoder_meas_20160707/channel_sel.v
+Z16 FC:/Users/Administrator/Desktop/encoder_meas_20160707/channel_sel.v
+L0 1
+Z17 OL;L;10.0c;49
+r1
+31
+Z18 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z19 !s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/encoder_meas_20160707 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z20 !s100 M6RLzf2oW_f_hl7@Pl@_^3
+!s85 0
+Z21 !s108 1474447766.277000
+Z22 !s107 C:/Users/Administrator/Desktop/encoder_meas_20160707/channel_sel.v|
+Z23 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/encoder_meas_20160707|C:/Users/Administrator/Desktop/encoder_meas_20160707/channel_sel.v|
+vencoder_meas
+Z24 IM^dGE@7R]aZIgWjJkOdz^2
+Z25 Vh9FFQkHUURIABeFX:TMhd2
+R13
+Z26 w1468060094
+Z27 8C:/Users/Administrator/Desktop/encoder_meas_20160707/encoder_meas.v
+Z28 FC:/Users/Administrator/Desktop/encoder_meas_20160707/encoder_meas.v
+L0 1
+R17
+r1
+31
+R18
+R19
+Z29 !s100 BHSSV<A]c?[V<Qof8]HnS0
+!s85 0
+Z30 !s108 1474447766.137000
+Z31 !s107 C:/Users/Administrator/Desktop/encoder_meas_20160707/encoder_meas.v|
+Z32 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/encoder_meas_20160707|C:/Users/Administrator/Desktop/encoder_meas_20160707/encoder_meas.v|
+vencoder_meas_vlg_tst
+Z33 IWK<1?6WUHGI3W]EYka6J>0
+Z34 V:cR<bH>1d>]>ZHdAE1]213
+R13
+Z35 w1466731910
+Z36 8C:/Users/Administrator/Desktop/encoder_meas_20160707/simulation/modelsim/encoder_meas.vt
+Z37 FC:/Users/Administrator/Desktop/encoder_meas_20160707/simulation/modelsim/encoder_meas.vt
+L0 28
+R17
+r1
+31
+R18
+Z38 !s100 D613dT1I>_SnK;U`8_;5O2
+!s85 0
+Z39 !s108 1474447766.667000
+Z40 !s107 C:/Users/Administrator/Desktop/encoder_meas_20160707/simulation/modelsim/encoder_meas.vt|
+Z41 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/encoder_meas_20160707/simulation/modelsim|C:/Users/Administrator/Desktop/encoder_meas_20160707/simulation/modelsim/encoder_meas.vt|
+Z42 !s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/encoder_meas_20160707/simulation/modelsim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vmcu_rd
+Z43 I^4HVC5:d4[0H5ZJ3ST14Z2
+Z44 VPNW4mnOOe^0]<I4oGA@FP1
+R13
+Z45 w1463227315
+Z46 8C:/Users/Administrator/Desktop/encoder_meas_20160707/mcu_rd.v
+Z47 FC:/Users/Administrator/Desktop/encoder_meas_20160707/mcu_rd.v
+L0 1
+R17
+r1
+31
+R18
+R19
+Z48 !s100 ZeN0gccHj;mhL6diHC`@63
+!s85 0
+Z49 !s108 1474447766.537000
+Z50 !s107 C:/Users/Administrator/Desktop/encoder_meas_20160707/mcu_rd.v|
+Z51 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/encoder_meas_20160707|C:/Users/Administrator/Desktop/encoder_meas_20160707/mcu_rd.v|
+vsample
+Z52 ILH?biRDf2cY4ecVmb>eQ[1
+Z53 Vgo2?jXA2]@aE4MaVd_Ram2
+R13
+Z54 w1468060015
+Z55 8C:/Users/Administrator/Desktop/encoder_meas_20160707/sample.v
+Z56 FC:/Users/Administrator/Desktop/encoder_meas_20160707/sample.v
+L0 2
+R17
+r1
+31
+R18
+R19
+Z57 !s100 FDncfF]>O9;mR_Dgm^gOi3
+!s85 0
+Z58 !s108 1474447766.417000
+Z59 !s107 C:/Users/Administrator/Desktop/encoder_meas_20160707/sample.v|
+Z60 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/encoder_meas_20160707|C:/Users/Administrator/Desktop/encoder_meas_20160707/sample.v|

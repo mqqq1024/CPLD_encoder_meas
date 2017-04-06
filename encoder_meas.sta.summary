@@ -1,0 +1,61 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk'
+Slack : -15.485
+TNS   : -2246.721
+
+Type  : Setup 'ch_sync'
+Slack : -6.059
+TNS   : -53.161
+
+Type  : Setup 'mcu_rd_clk'
+Slack : -3.973
+TNS   : -70.278
+
+Type  : Hold 'clk'
+Slack : 1.472
+TNS   : 0.000
+
+Type  : Hold 'ch_sync'
+Slack : 1.650
+TNS   : 0.000
+
+Type  : Hold 'mcu_rd_clk'
+Slack : 1.675
+TNS   : 0.000
+
+Type  : Recovery 'mcu_rd_clk'
+Slack : -5.654
+TNS   : -113.080
+
+Type  : Recovery 'ch_sync'
+Slack : -0.761
+TNS   : -6.177
+
+Type  : Removal 'ch_sync'
+Slack : 1.123
+TNS   : 0.000
+
+Type  : Removal 'mcu_rd_clk'
+Slack : 6.100
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'ch_sync'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'mcu_rd_clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'mcu_start'
+Slack : -2.289
+TNS   : -2.289
+
+------------------------------------------------------------

@@ -1,0 +1,72 @@
+module channel_sel(clk, en, trigger_in, trigger_out, scr_de);
+
+input clk, en;
+input trigger_in;
+
+output trigger_out;
+output scr_de;
+
+//reg trigger_out;
+//reg scr_de;
+reg trigger_sync;
+reg[2:0] div;
+
+reg[19:0] counter;
+
+initial counter = 20'b0;
+//initial trigger_out = 1'b0;
+initial div = 3'b0;
+
+always @ (posedge clk)
+begin
+	trigger_sync <= trigger_in;
+end
+
+//wire eq, clr;
+//assign eq = div[2] & div[1];
+//assign clr = ~(~en | eq);
+
+always @ (posedge trigger_sync, negedge en)
+begin
+	if(!en)
+	begin
+	div <= 1'b0;
+	end
+	else
+	begin
+		if(div == 3'h4)
+		begin
+			div <= 1'b0;
+		end
+		else
+		begin
+			div <= div + 1'b1;
+		end
+	end
+end
+
+assign trigger_out = div == 1'b1 ? 1'b1 : 1'b0;
+
+wire less;
+
+assign less = counter <= 20'd700000 ? 1'b1 : 1'b0;
+
+always @ (posedge clk, negedge trigger_out)
+begin
+	if(!trigger_out)
+	begin
+		counter <= 20'b0;
+//		scr_de <= 1'b0;
+	end
+	else
+	begin
+		if(less)
+		begin
+			counter <= counter + 1'b1;
+		end
+	end
+end
+
+assign scr_de = less && counter > 20'd500000 ? 1'b1 : 1'b0;
+
+endmodule

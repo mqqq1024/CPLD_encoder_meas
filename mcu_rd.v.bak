@@ -1,0 +1,42 @@
+module mcu_rd(n_rst, nrd, nwr, data, addr, mem_nrd, mem_data, mem_addr);
+
+input n_rst;
+input nrd, nwr, addr;
+inout[9:0] data;
+
+output mem_nrd;
+output[19:0] mem_addr;
+input[9:0] mem_data;
+
+reg[19:0] rd_addr;
+reg[9:0] step;
+
+assign data = nrd ? mem_data : 10'bz;
+assign mem_nrd = nrd;
+assign mem_addr = rd_addr[19:0];
+
+always @ (posedge nrd, negedge n_rst)
+begin
+	if(!n_rst)
+	begin
+		rd_addr <= 20'b0;
+	end
+	else
+	begin
+		if(rd_addr < 20'h80000)
+		begin
+			rd_addr <= rd_addr + 1'b1;
+		end
+		else
+		begin
+			rd_addr <= 20'b0;
+		end
+	end
+end
+
+//always @ (posedge nwr)
+//begin
+//	step <= data;
+//end
+
+endmodule

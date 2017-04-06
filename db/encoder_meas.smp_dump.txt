@@ -1,0 +1,9 @@
+
+State Machine - |encoder_meas|sample:u2|state
+Name state.W2 state.W4 state.W3 state.W0 state.W1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.W1 0 0 0 0 1 1 
+state.W0 0 0 0 1 0 1 
+state.W3 0 0 1 0 0 1 
+state.W4 0 1 0 0 0 1 
+state.W2 1 0 0 0 0 1 

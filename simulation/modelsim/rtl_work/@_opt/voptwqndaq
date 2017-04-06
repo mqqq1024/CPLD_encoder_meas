@@ -1,0 +1,103 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\encoder_measurement\simulation\modelsim
+T_opt
+Z1 V[X8OFM]g3Q3`5C`0M2L:j1
+Z2 04 20 4 work encoder_meas_vlg_tst fast 0
+Z3 =1-408d5c90cf0e-57359f98-5c-2340
+Z4 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work +acc
+Z5 n@_opt
+Z6 OL;O;10.0c;49
+Z7 dF:\encoder_measurement\simulation\modelsim
+vchannel_sel
+Z8 I1EJU9TQ4`cnd640OM?6fl0
+Z9 V[?aIAGXQ9^NnXjbn>6^Y>0
+R7
+Z10 w1463121179
+Z11 8F:/encoder_measurement/channel_sel.v
+Z12 FF:/encoder_measurement/channel_sel.v
+L0 1
+Z13 OL;L;10.0c;49
+r1
+31
+Z14 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z15 !s92 -vlog01compat -work work +incdir+F:/encoder_measurement -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z16 !s100 OICB=gUVN]k8nRQg0JdDi0
+!s85 0
+Z17 !s108 1463132055.424000
+Z18 !s107 F:/encoder_measurement/channel_sel.v|
+Z19 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/encoder_measurement|F:/encoder_measurement/channel_sel.v|
+vencoder_meas
+Z20 Id@ZmU^jQ:7bc8e`MIZaAI0
+Z21 V9d6Df0Q0je02fAV^XEZM]2
+R7
+Z22 w1463122201
+Z23 8F:/encoder_measurement/encoder_meas.v
+Z24 FF:/encoder_measurement/encoder_meas.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z25 !s100 68dLz5Gl1LmbJaM^^I3N13
+!s85 0
+Z26 !s108 1463132055.109000
+Z27 !s107 F:/encoder_measurement/encoder_meas.v|
+Z28 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/encoder_measurement|F:/encoder_measurement/encoder_meas.v|
+vencoder_meas_vlg_tst
+Z29 I:07c=6Xg9BjD7zkXhUF=R2
+Z30 V:cR<bH>1d>]>ZHdAE1]213
+R7
+Z31 w1463127151
+Z32 8F:/encoder_measurement/simulation/modelsim/encoder_meas.vt
+Z33 FF:/encoder_measurement/simulation/modelsim/encoder_meas.vt
+L0 28
+R13
+r1
+31
+R14
+Z34 !s100 F_R`8SlSO1KV>zUGL2gcJ2
+!s85 0
+Z35 !s108 1463132055.714000
+Z36 !s107 F:/encoder_measurement/simulation/modelsim/encoder_meas.vt|
+Z37 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/encoder_measurement/simulation/modelsim|F:/encoder_measurement/simulation/modelsim/encoder_meas.vt|
+Z38 !s92 -vlog01compat -work work +incdir+F:/encoder_measurement/simulation/modelsim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vmcu_rd
+Z39 I<42`7Tfb2Rh9lM1@NUmNZ0
+Z40 VPNW4mnOOe^0]<I4oGA@FP1
+R7
+Z41 w1463025022
+Z42 8F:/encoder_measurement/mcu_rd.v
+Z43 FF:/encoder_measurement/mcu_rd.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z44 !s100 ZeN0gccHj;mhL6diHC`@63
+!s85 0
+Z45 !s108 1463132055.248000
+Z46 !s107 F:/encoder_measurement/mcu_rd.v|
+Z47 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/encoder_measurement|F:/encoder_measurement/mcu_rd.v|
+vsample
+Z48 IZV=:Na9zARIj;<5I6LPzh2
+Z49 VIWTnKHcf02E]d[>bakhJL1
+R7
+Z50 w1463131764
+Z51 8F:/encoder_measurement/sample.v
+Z52 FF:/encoder_measurement/sample.v
+L0 1
+R13
+r1
+31
+R14
+R15
+Z53 !s100 1NzDoI;80dTJfQWh>HddZ1
+!s85 0
+Z54 !s108 1463132055.594000
+Z55 !s107 F:/encoder_measurement/sample.v|
+Z56 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/encoder_measurement|F:/encoder_measurement/sample.v|

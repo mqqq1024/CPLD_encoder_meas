@@ -1,0 +1,57 @@
+module encoder_meas(clk, mcu_nrd, mcu_nwr, mcu_data, mcu_start, mcu_end, mcu_rd_clk, ch_in, ch_sync, ram_nrd, ram_nwr, ram_ncs, ram_addr, ram_data);
+
+input clk;
+
+input mcu_nrd, mcu_nwr;
+input mcu_start;
+output mcu_end;
+input mcu_rd_clk;
+inout[7:0] mcu_data;
+
+input[16:0] ch_in;
+input ch_sync;
+
+output ram_nrd, ram_nwr, ram_ncs;
+output[19:0] ram_addr;
+inout[7:0] ram_data;
+
+wire[19:0] mem_addr;
+wire[7:0] mem_data;
+wire mem_nrd;
+wire mem_nwr;
+
+assign ram_ncs = 1'b0;
+
+channel_sel u1(
+	.clk(clk),
+	.ch_in(ch_in),
+	.ch_sync(ch_sync)
+);
+
+//sample u2(
+//	.clk(clk),
+//	.n_rst(trigger_nrst),
+//	.start(scr_de),
+//	.ram_nrd(ram_nrd),
+//	.ram_nwr(ram_nwr),
+//	.ram_addr(ram_addr),
+//	.ram_data(ram_data),
+//	.mem_nrd(mem_nrd),
+//	.mem_addr(mem_addr),
+//	.mem_data(mem_data),
+//	.adc_data(adc_data),
+//	.done(sample_end)
+//);
+
+//cpu_rw u3(
+//	.n_rst(sample_end),
+//	.nrd(nrd),
+//	.nwr(nwr),
+//	.data(data),
+//	.addr(addr),
+//	.mem_nrd(mem_nrd),
+//	.mem_addr(mem_addr),
+//	.mem_data(mem_data)
+//);
+
+endmodule

@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Sep 21 16:47:28 2016
+Quartus II 64-Bit Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+Revision Name : encoder_meas
+Top-level Entity Name : encoder_meas
+Family : MAX II
+Device : EPM570T100C5
+Timing Models : Final
+Total logic elements : 301 / 570 ( 53 % )
+Total pins : 67 / 76 ( 88 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

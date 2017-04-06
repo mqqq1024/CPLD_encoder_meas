@@ -1,0 +1,96 @@
+module sample(clk, ch_sgn_in, ch_sync_in, ch_sgn_out, ch_sync_out, mcu_n_rst, mcu_nrd, mcu_data, mcu_start, mcu_end, mem_addr, mem_data, mem_nrd);
+
+input clk,ch_sync_in;
+input mcu_start;
+output mcu_end;
+input mcu_nrd;//0:read 1:write
+input mcu_n_rst;//0:reset 1:set
+input[16:0] ch_sgn_in;
+output[7:0] mcu_data;
+output ch_sgn_out;
+output ch_sync_out;
+
+reg[4:0] cycle_cnt;
+initial cycle_cnt = 5'b0;
+
+input mem_nrd;
+input[19:0] mem_addr;
+output[7:0] mem_data;
+
+reg ch_sgn_tmp;
+reg ch_sync_delay;
+reg sample_enable;
+reg sample_end;
+initial sample_end=1'b1;
+
+parameter max_cycle_num=30;
+
+assign ch_sync_out = sample_enable ? ch_sync_in : 1'b0;//tell mcu the sync signal of cycle num
+assign ch_sgn_out = ch_sgn_tmp;
+assign mcu_end = sample_end;//tell mcu the end of sample
+assign mcu_data = sample_end ? mem_data : cycle_cnt;
+
+always @ (posedge mcu_start)
+begin
+	if(!mcu_n_rst)
+	begin
+		sample_enable <= 1'b0;
+	end
+	else
+	begin
+		sample_enable <= 1'b1;
+	end
+end
+
+always @ (posedge clk)
+begin
+   ch_sync_delay <= ch_sync_in;
+	if(ch_sync_delay == 1'b0 && ch_sync_in == 1'b1)
+	begin
+		if(!sample_enable)
+			begin
+			  cycle_cnt=5'b0;  
+			  sample_end=1'b0; 
+			end
+		else
+			begin
+			  cycle_cnt=cycle_cnt+1;
+			  if(cycle_cnt==max_cycle_num)
+				  begin
+					 cycle_cnt=1'b0;
+					 sample_end=1'b1; 
+				  end
+		end
+	case (cycle_cnt)
+	  5'd1:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd2:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd3:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd4:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd5:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd6:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd7:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd8:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd9:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd10:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd11:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd12:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd13:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd14:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd15:ch_sgn_tmp<=ch_sgn_in[cycle_cnt];
+	  5'd16:ch_sgn_tmp<=ch_sgn_in[1]&ch_sgn_in[2];
+	  5'd17:ch_sgn_tmp<=ch_sgn_in[1]&ch_sgn_in[3];
+	  5'd18:ch_sgn_tmp<=ch_sgn_in[2]&ch_sgn_in[3];
+	  5'd19:ch_sgn_tmp<=ch_sgn_in[4]&ch_sgn_in[5];
+	  5'd20:ch_sgn_tmp<=ch_sgn_in[4]&ch_sgn_in[6];
+	  5'd21:ch_sgn_tmp<=ch_sgn_in[4]&ch_sgn_in[7];
+	  5'd22:ch_sgn_tmp<=ch_sgn_in[4]&ch_sgn_in[8];
+	  5'd23:ch_sgn_tmp<=ch_sgn_in[4]&ch_sgn_in[9];
+	  5'd24:ch_sgn_tmp<=ch_sgn_in[4]&ch_sgn_in[10];
+	  5'd25:ch_sgn_tmp<=ch_sgn_in[4]&ch_sgn_in[11];
+	  default:ch_sgn_tmp<=ch_sgn_in[0];
+	endcase
+	end
+end
+
+
+endmodule
